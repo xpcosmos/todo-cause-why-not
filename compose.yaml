@@ -1,14 +1,21 @@
 services:
-  postgres:
-    image: postgres
-    volumes:
-      - db:/DB
+  mongo:
+    build: .
+    restart: always
+    env_file:
+      - .env
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_DB: postgres
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
     ports:
-      - "5432:5432"
-
+      - "27017:27017"
+    volumes:
+      - mongo:/etc/mongo:rw
+    networks:
+      - backend
 volumes:
-  db:
+  mongo:
+
+networks:
+  backend:
+    driver: bridge

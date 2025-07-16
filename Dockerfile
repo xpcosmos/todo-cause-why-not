@@ -1,3 +1,3 @@
-FROM postgres
+FROM mongo
 
-EXPOSE 5432
+EXPOSE 27017
