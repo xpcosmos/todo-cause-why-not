@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: todo-cause-why-not
+  data: 
+    mongodb:
+      port: ${MONGO_PORT}
+      username: ${MONGO_INITDB_ROOT_USERNAME}
+      password: ${MONGO_INITDB_ROOT_PASSWORD}
+      database: Default
+  config:
+    import:
+      file:.env[.properties]
+  jpa:
+    hibernate:
+      ddl-auto: update
