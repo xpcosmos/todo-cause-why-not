@@ -3,7 +3,9 @@ package com.xpcosmos.todo_cause_why_not.todo;
 import java.time.LocalDateTime;
 
 import org.bson.types.ObjectId;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document("Todo")
@@ -15,13 +17,17 @@ public class Todo {
   private String taskDescription;
   private LocalDateTime expectedCompletion;
   private LocalDateTime startDateTime;
+  @CreatedDate
+  private LocalDateTime createdAt;
+  @LastModifiedDate
+  private LocalDateTime modifiedAt;
 
   public Todo() {
-  };
+  }
 
   public ObjectId getId() {
     return this.id;
-  };
+  }
 
   public String getTaskTitle() {
     return this.taskTitle;
@@ -53,6 +59,14 @@ public class Todo {
 
   public void setStartDateTime(LocalDateTime value) {
     this.startDateTime = value;
+  }
+
+  public LocalDateTime getCreatedAt() {
+    return this.createdAt;
+  }
+
+  public LocalDateTime getModifiedAt() {
+    return this.modifiedAt;
   }
 
 }
