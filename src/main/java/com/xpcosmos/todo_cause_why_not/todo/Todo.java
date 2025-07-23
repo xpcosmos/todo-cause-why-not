@@ -21,6 +21,7 @@ public class Todo {
   private LocalDateTime createdAt;
   @LastModifiedDate
   private LocalDateTime modifiedAt;
+  private TodoEnumStatus taskStatus;
 
   public Todo() {
   }
@@ -75,6 +76,14 @@ public class Todo {
 
   public void setModifiedAt() {
     this.modifiedAt = LocalDateTime.now();
+  }
+
+  public TodoEnumStatus getTaskStatus(){
+    return this.taskStatus;
+  }
+
+  public void setTaskStatus(TodoEnumStatus value){
+    this.taskStatus = value;
   }
 
 }
