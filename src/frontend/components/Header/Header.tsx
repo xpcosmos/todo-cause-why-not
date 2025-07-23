@@ -7,8 +7,10 @@ function Header(){
   return (
     <>
     <div className="page-header">
-      <h1>Today</h1>
-      <p>{DateUtils.getFormattedToday()}</p>
+      <div className="date-callout">
+        <h1>Today</h1>
+        <p>{DateUtils.getFormattedToday()}</p>
+      </div>
     </div>
     </>
   )
