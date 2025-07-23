@@ -20,12 +20,14 @@ public class TodoController {
 
   @GetMapping("/todos")
   public List<Todo> getAll() {
-      return todoRepository.findAll();
+    return todoRepository.findAll();
   }
 
   @PostMapping("/todos")
   public void createTodo(@RequestBody Todo todo) {
-      todoRepository.insert(todo);
+    todo.setCreatedAt();
+    todo.setModifiedAt();
+    todoRepository.insert(todo);
   }
 
 }

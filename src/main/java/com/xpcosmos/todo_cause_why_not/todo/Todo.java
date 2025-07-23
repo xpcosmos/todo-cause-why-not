@@ -65,8 +65,16 @@ public class Todo {
     return this.createdAt;
   }
 
+  public void setCreatedAt() {
+    this.createdAt = LocalDateTime.now();
+  }
+
   public LocalDateTime getModifiedAt() {
     return this.modifiedAt;
+  }
+
+  public void setModifiedAt() {
+    this.modifiedAt = LocalDateTime.now();
   }
 
 }
