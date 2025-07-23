@@ -1,6 +1,8 @@
 spring:
   application:
     name: todo-cause-why-not
+  config:
+    import: file:.env[.properties]
   data:
     mongodb:
       host: ${MONGO_HOST}
