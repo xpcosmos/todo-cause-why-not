@@ -1,5 +1,6 @@
 import Header from "../components/Header/Header";
 import SearchBar from "../components/SearchBar/SearchBar";
+import StatusNavigation from "../components/StatusNavegation/StatusNavigation";
 
 
 function Home(){
@@ -7,6 +8,7 @@ function Home(){
     <>
     <Header/>
     <SearchBar/>
+    <StatusNavigation/>
     </>
   )
 };
