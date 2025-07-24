@@ -1,7 +1,7 @@
-import type { Status } from "../../api/Status";
+import type { StatusType } from "../../api/Status";
 import "./StatusTab.scss";
 
-function StatusTab({ label }: Status) {
+function StatusTab({ label }: StatusType) {
   return (
     <>
     <div className="nav-box">
