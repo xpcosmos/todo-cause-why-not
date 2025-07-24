@@ -6,7 +6,7 @@ function StatusTab({ label }: StatusType) {
     <>
     <div className="nav-box">
     <li className="nav-item">
-        <a onClick={() => console.log("Oi")} href="#">
+        <a href="#">
           {label}
         </a>
       </li>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { TodoService } from "../../api/services/TodoService";
 // import type { StatusType } from "../../api/Status";
-import type { TodoType } from "../../api/models/Todo";
+import type { TodoType } from "../../api/models/TodoType";
 import Status from "../../api/Status";
 import TaskCard from "../TaskCard/TaskCard";
 

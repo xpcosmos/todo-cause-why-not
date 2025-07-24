@@ -1,5 +1,5 @@
 
-import type { TodoType } from "../models/Todo";
+import type { TodoType } from "../models/TodoType";
 import type { TodoRepository } from "../repositories/TodoRepository";
 import type { StatusType } from "../Status";
 

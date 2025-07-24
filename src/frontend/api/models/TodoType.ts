@@ -1,5 +1,3 @@
-import type { StatusType } from "../Status";
-
 export type TodoType = {
   id: string;
   taskTitle: string;
@@ -8,5 +6,5 @@ export type TodoType = {
   startDateTime?: Date;
   createdAt: Date;
   modifiedAt: Date;
-  taskStatus: StatusType;
+  taskStatus: string;
 }
