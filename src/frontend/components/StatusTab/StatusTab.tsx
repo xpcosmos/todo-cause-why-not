@@ -1,17 +1,32 @@
+import { useContext } from "react";
 import type { StatusType } from "../../api/Status";
 import "./StatusTab.scss";
 
-function StatusTab({ label }: StatusType) {
+import { NavigationContext } from "../StatusNavegation/NavigationContext";
+
+function StatusTab({ label, value }: StatusType) {
+  const { currentTab, setCurrentTab } = {...useContext(NavigationContext) };
+  const className = () => {
+    if (currentTab == value) {
+      return "nav-item-on";
+    } else {
+      return "nav-item-off";
+    }
+  };
+
   return (
     <>
-    <div className="nav-box">
-    <li className="nav-item">
-        <a href="#">
-          {label}
-        </a>
-      </li>
-    </div>
-      
+      <div className="nav-box">
+        <li className="nav-item">
+          <a
+            href="#"
+            className={className()}
+            onClick={() => setCurrentTab?.(value)}
+          >
+            {label}
+          </a>
+        </li>
+      </div>
     </>
   );
 }
