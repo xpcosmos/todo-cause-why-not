@@ -1,6 +1,6 @@
 import type { StatusType } from "../Status";
 
-export interface Todo {
+export interface ITodo {
   id: string;
   taskTitle: string;
   taskDescription: string;
