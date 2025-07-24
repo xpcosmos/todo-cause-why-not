@@ -1,12 +1,12 @@
 import StatusTab from "../StatusTab/StatusTab";
-import Status from "../../api/Status";
+import Status, { type StatusType } from "../../api/Status";
 import "./StatusNavigation.scss";
 
 import { NavigationContext } from "./NavigationContext";
 import { useState } from "react";
 
 function StatusNavigation() {
-  const [currentTab, setCurrentTab] = useState<string>("Pending");
+  const [currentTab, setCurrentTab] = useState<StatusType>(Status.pending);
   return (
     <>
   <NavigationContext.Provider value={{currentTab, setCurrentTab}}>

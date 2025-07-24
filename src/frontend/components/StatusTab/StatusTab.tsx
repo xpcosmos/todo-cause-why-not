@@ -4,10 +4,10 @@ import "./StatusTab.scss";
 
 import { NavigationContext } from "../StatusNavegation/NavigationContext";
 
-function StatusTab({ label, value }: StatusType) {
+function StatusTab({id, label, value }: StatusType) {
   const { currentTab, setCurrentTab } = {...useContext(NavigationContext) };
   const className = () => {
-    if (currentTab == value) {
+    if (currentTab?.value == value) {
       return "nav-item-on";
     } else {
       return "nav-item-off";
@@ -21,7 +21,7 @@ function StatusTab({ label, value }: StatusType) {
           <a
             href="#"
             className={className()}
-            onClick={() => setCurrentTab?.(value)}
+            onClick={() => setCurrentTab?.({id, label, value })}
           >
             {label}
           </a>
