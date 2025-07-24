@@ -1,9 +1,10 @@
-import type { ITodo } from "../../api/models/Todo"
+import { Md5 } from "ts-md5"
+import type { TodoType } from "../../api/models/Todo"
 
-function TaskCard( props: ITodo){
+function TaskCard( {...props}: TodoType){
   return (
     <>
-    <div className="task-card">
+    <div className="task-card" key={ Md5.hashStr(JSON.stringify(props.id))}>
       <div className="task-card-status">
         {props.taskStatus.label}
       </div>

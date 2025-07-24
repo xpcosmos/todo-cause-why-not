@@ -1,14 +1,20 @@
+interface IStatus{
+  pending:StatusType,
+  onGoing:StatusType,
+  complete:StatusType
+}
+
 export type StatusType = {
   id: string;
   label: string;
   value: string;
 };
 
-const Status: Record<string, StatusType> = {
+const Status: IStatus = {
   pending: {
     id: "0",
     label: "Pending",
-    value: "Pedining",
+    value: "Pending",
   },
   onGoing: {
     id: "1",

@@ -1,6 +1,6 @@
-import type { ITodo } from "../models/Todo"
+import type { TodoType } from "../models/Todo"
 import type { StatusType } from "../Status"
 
 export abstract class TodoRepository {
-  abstract findByStatus(status:StatusType):Promise<ITodo>;
+  abstract findByStatus(status:StatusType):Promise<Array<TodoType>>;
 }
