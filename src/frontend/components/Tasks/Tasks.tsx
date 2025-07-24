@@ -1,4 +1,4 @@
-function Task(){
+function Tasks(){
   return(
     
     <>
@@ -9,4 +9,4 @@ function Task(){
   )
 }
 
-export default Task
+export default Tasks
