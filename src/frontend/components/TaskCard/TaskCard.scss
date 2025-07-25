@@ -1,4 +1,23 @@
+@mixin base-circle($color) {
+  $size: 1em;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: $color;
+}
+
 .task-card{
   border: 1px solid black;
-  
+}
+
+.pending-circle{
+  @include base-circle(hsl(0, 70%, 70%))
+}
+
+.ongoing-circle{
+  @include base-circle(hsl(70, 70%, 70%))
+}
+
+.complete-circle{
+  @include base-circle(hsl(115, 70%, 70%))
 }

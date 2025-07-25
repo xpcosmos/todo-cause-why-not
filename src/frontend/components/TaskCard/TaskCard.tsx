@@ -5,11 +5,14 @@ import DateUtils from "../../api/DateUtils";
 
 function TaskCard({ ...props }: TodoType) {
   const key: string = Md5.hashStr(JSON.stringify(props.id));
+
+  const fmtStatusClass = (v:string) => `${v.toLowerCase()}-circle`
+
   return (
     <>
       <div className="task-card" key={key} id={key}>
         <div className="task-card-status">
-          <p>{props.taskStatus}</p>
+          <div className={fmtStatusClass(props.taskStatus)}></div>
         </div>
         <div className="task-card-callout">
           <h2>{props.taskTitle}</h2>
