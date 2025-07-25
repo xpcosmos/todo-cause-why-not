@@ -1,22 +1,18 @@
 .add-new {
-    position: absolute;
-    background-color: gray;
-    height: 3rem;
-    width: 3rem;
-    top: 95%;
-    left: 90%;
+  position: absolute;
+  background-color: gray;
+  height: 3rem;
+  width: 3rem;
+  top: 95%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  border-radius: 40px;
+
+  .add-new-button{
+    position: relative;
     transform: translate(-50%, -50%);
-    border-radius: 40px;
-    
-}
-
-
-@keyframes grow {
-  to {
-    top: 50%;
-    left:  50%;
-    border-radius: 10px;
-    width: 60vw;
-    height: 80vh;
+    top:50%;
+    left: 50%;
   }
+
 }
