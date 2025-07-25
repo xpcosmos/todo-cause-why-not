@@ -1,31 +1,32 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { TodoService } from "../../api/services/TodoService";
 // import type { StatusType } from "../../api/Status";
 import type { TodoType } from "../../api/models/TodoType";
-import Status from "../../api/Status";
+
 import TaskCard from "../TaskCard/TaskCard";
+import { NavigationContext } from "../StatusNavigation/NavigationContext";
 
 function Tasks() {
-  const [res, setRes] = useState<Array<TodoType>>([]);
+  const [resquestResponse, setResquestResponse] = useState<Array<TodoType>>([]);
+  const { currentTab } = { ...useContext(NavigationContext) };
 
   useEffect(() => {
     const todoService = new TodoService();
     const fetchApi = async () => {
-      try{
-        const response = await todoService.findByStatus(Status.pending);
-        console.log(response)
-        setRes(response);
-      } catch{
-        throw new Error("Reponse error!");
-      }
+      const response = await todoService.findByStatus(currentTab!);
+      setResquestResponse(response);
     };
-    
-    fetchApi();
-  }, []);
 
-  return <>{
-    res.map(v => <TaskCard {...v} key={v.id} />)
-    }</>;
+    fetchApi();
+  }, [currentTab]);
+
+  return (
+    <>
+      {resquestResponse.map((v) => (
+        <TaskCard {...v} key={v.id + v.createdAt}/>
+      ))}
+    </>
+  );
 }
 
 export default Tasks;
