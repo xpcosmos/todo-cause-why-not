@@ -1,0 +1,7 @@
+.add-new {
+  & button {
+    position: fixed;
+    top: clamp(85%, 95%, 97%);
+    left: clamp(70%, 80%, 95%);
+  }
+}

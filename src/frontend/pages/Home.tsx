@@ -5,6 +5,7 @@ import Status, { type StatusType } from "../api/Status";
 import SearchBar from "../components/SearchBar/SearchBar";
 import StatusNavigation from "../components/StatusNavigation/StatusNavigation";
 import { NavigationContext } from "../components/StatusNavigation/NavigationContext";
+import AddNewButton from "../components/AddNewButton/AddNewButton";
 
 function Home() {
   const [currentTab, setCurrentTab] = useState<StatusType>(Status.pending);
@@ -16,6 +17,7 @@ function Home() {
         <StatusNavigation />
         <Tasks />
       </NavigationContext.Provider>
+      <AddNewButton/>
     </>
   );
 }

@@ -35,7 +35,7 @@ public class TodoController {
   }
 
   @GetMapping("/todos/status/{taskStatus}")
-  public List<Todo> getByStatus(@PathVariable("taskStatus") TodoEnumStatus taskStatus) {
+  public List<Todo> getByStatus(@PathVariable TodoEnumStatus taskStatus) {
     return todoRepository.findByTaskStatus(taskStatus);
   }
 }
