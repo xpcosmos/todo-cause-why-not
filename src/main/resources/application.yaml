@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: todo-cause-why-not
+  config:
+    import: file:.env[.properties]
+  data:
+    mongodb:
+      host: ${MONGO_HOST}
+      username: ${MONGO_USER}
+      password: ${MONGO_PASSWORD}
+      port: ${MONGO_PORT}
+      database: ${MONGO_DB}

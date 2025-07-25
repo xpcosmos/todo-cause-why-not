@@ -1,0 +1,24 @@
+services:
+  mongo:
+    build: .
+    restart: always
+    env_file:
+      - .env
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+      MONGO_USER: ${MONGO_USER}
+      MONGO_PASSWORD: ${MONGO_PASSWORD}
+      MONGO_DB: ${MONGO_DB}
+    ports:
+      - ${MONGO_PORT}:${MONGO_PORT}
+    volumes:
+      - ./.db:/docker-entrypoint-initdb.d:ro
+    networks:
+      - backend
+volumes:
+  mongo:
+
+networks:
+  backend:
+    driver: bridge

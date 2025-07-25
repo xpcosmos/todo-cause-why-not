@@ -1,0 +1,19 @@
+import type { StatusType } from "../../api/Status";
+import "./StatusTab.scss";
+
+function StatusTab({ label }: StatusType) {
+  return (
+    <>
+    <div className="nav-box">
+    <li className="nav-item">
+        <a href="#">
+          {label}
+        </a>
+      </li>
+    </div>
+      
+    </>
+  );
+}
+
+export default StatusTab;

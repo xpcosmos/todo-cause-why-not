@@ -1,0 +1,21 @@
+.search-box {
+  border-radius: 60px;
+  width: clamp(70dvw, 80dvw, 90dvw);
+  height: clamp(3dvh, 4dvh, 5dvh);
+  display: flex;
+  border: 1px black solid;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 1rem;
+  }
+
+  & input {
+    border: none;
+    outline: 0px;
+  }
+
+}
