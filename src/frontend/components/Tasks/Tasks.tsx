@@ -1,8 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { TodoService } from "../../api/services/TodoService";
-// import type { StatusType } from "../../api/Status";
 import type { TodoType } from "../../api/models/TodoType";
-
 import TaskCard from "../TaskCard/TaskCard";
 import { NavigationContext } from "../StatusNavigation/NavigationContext";
 

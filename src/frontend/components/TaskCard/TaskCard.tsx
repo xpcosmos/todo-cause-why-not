@@ -4,9 +4,10 @@ import "./TaskCard.scss";
 import DateUtils from "../../api/DateUtils";
 
 function TaskCard({ ...props }: TodoType) {
+  const key: string = Md5.hashStr(JSON.stringify(props.id));
   return (
     <>
-      <div className="task-card" key={Md5.hashStr(JSON.stringify(props.id))}>
+      <div className="task-card" key={key} id={key}>
         <div className="task-card-status">
           <p>{props.taskStatus}</p>
         </div>

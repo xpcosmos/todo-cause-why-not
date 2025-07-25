@@ -6,9 +6,9 @@ function StatusNavigation() {
   return (
     <>
       <ul className="status-navigation">
-        <StatusTab {...Status.pending } />
-        <StatusTab {...Status.onGoing } />
-        <StatusTab {...Status.complete } />
+        <StatusTab {...Status.pending} />
+        <StatusTab {...Status.onGoing} />
+        <StatusTab {...Status.complete} />
       </ul>
     </>
   );
