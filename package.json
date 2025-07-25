@@ -10,12 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-spring/web": "^10.0.1",
     "@types/object-hash": "^3.0.6",
+    "@types/react-motion": "^0.0.40",
+    "add": "^2.0.6",
     "i": "^0.3.7",
+    "motion": "^12.23.9",
     "npm": "^11.5.1",
     "object-hash": "^3.0.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-spring": "^10.0.1",
     "sass": "^1.89.2",
     "ts-md5": "^2.0.1"
   },
