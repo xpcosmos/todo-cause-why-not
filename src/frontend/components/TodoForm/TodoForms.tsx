@@ -19,14 +19,14 @@ const TodoForms = () => {
   return (
     <>
       <TodoFormContext value={{ isFormOpen, setIsFormOpen }}>
-        <motion.form className="base-form" animate={isFormOpen ? toDiv : {}}>
+        <motion.div className="base-form" animate={isFormOpen ? toDiv : {}}>
           <AddNewButton />
           <TodoFormField
             isHidden={!isFormOpen}
             inputType="text"
             placeHolder="Adicione seu texto"
             fieldTitle="Titulo"/>
-        </motion.form>
+        </motion.div>
       </TodoFormContext>
     </>
   );
