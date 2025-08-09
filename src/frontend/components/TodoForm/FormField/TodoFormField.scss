@@ -1,0 +1,15 @@
+.form-field{
+  margin: 1em;
+  .form-field-input{
+    box-sizing:border-box;
+    input{
+      box-sizing: inherit;
+      width: 90%;
+      padding: 5%;
+      margin: 5%;
+      border-radius: 10px;
+      border: 2px solid azure;
+      box-shadow: 2px 2px 3px gray;
+    }
+  }
+}

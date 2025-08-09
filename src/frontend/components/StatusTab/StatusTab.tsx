@@ -8,18 +8,18 @@ function StatusTab(props: StatusType) {
   const { currentTab, setCurrentTab } = { ...useContext(NavigationContext) };
   const className = () => {
     if (currentTab?.value == props.value) {
-      return "nav-item-on";
+      return "on";
     } else {
-      return "nav-item-off";
+      return "off";
     }
   };
   return (
     <>
-      <div className="nav-box" key={props.id} id={props.id}>
+      <div className={`nav-box-${className()}`} key={props.id} id={props.id}>
         <li className="nav-item">
           <a
             href="#"
-            className={className()}
+            className={`nav-item-link`}
             onClick={() => setCurrentTab?.(props)}
           >
             {props.label}

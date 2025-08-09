@@ -1,11 +1,16 @@
 import type { TodoFormFieldType } from "./TodoFormFieldType"
+import "./TodoFormField.scss"
 
 
 const TodoFormField = ({inputType, placeHolder, fieldTitle, isHidden}:TodoFormFieldType) => {
   return (
-    <div  hidden={isHidden}>
-      <p>{fieldTitle}</p>
-      <input type={inputType} placeholder={placeHolder} />
+    <div className="form-field" hidden={isHidden}>
+      <div className="form-field-title">
+        <p>{fieldTitle}</p>
+      </div>
+      <div className="form-field-input">
+        <input type={inputType} placeholder={placeHolder} />
+      </div>
     </div>
   )
 }

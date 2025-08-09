@@ -24,8 +24,18 @@ const TodoForms = () => {
           <TodoFormField
             isHidden={!isFormOpen}
             inputType="text"
-            placeHolder="Adicione seu texto"
+            placeHolder="O que precisa fazer?"
             fieldTitle="Titulo"/>
+          <TodoFormField
+            isHidden={!isFormOpen}
+            inputType="text"
+            placeHolder="Descrição"
+            fieldTitle="Descrição"/>
+          <TodoFormField
+            isHidden={!isFormOpen}
+            inputType="datetime-local"
+            placeHolder="Expectativa de conclusão"
+            fieldTitle="Conclusão estimada"/>
         </motion.div>
       </TodoFormContext>
     </>

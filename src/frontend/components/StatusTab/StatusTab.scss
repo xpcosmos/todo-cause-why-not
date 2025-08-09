@@ -1,19 +1,36 @@
+@use "sass:color";
 
-.nav-box{
-  background: darkkhaki;
+
+@mixin nav-box($color) {
   height: 2rem;
-
-.nav-item{
-    padding: 0.2em 1rem;
-    list-style-type:none;
-
-.nav-item-off{
-  background-color: red;
+  border-radius: 30px;
+  background-color: $color;
+  justify-items: center;
+  align-content: center;
 }
 
-.nav-item-on{
-  background-color: green;
-}
+@mixin nav-box-status($color) {
+  color: color.scale( $color,$lightness: -40%) ;
+  text-decoration: none;
+  padding: 0.2em 1rem;
 }
 
+@mixin nav-item($color){
+  position: relative;
+  list-style-type: none;
+  .nav-item-link {
+    @include nav-box-status($color);
+  }
+}
+
+.nav-box-on {
+  $color: hsl(206, 61%, 72%, 70%);
+  @include nav-box($color);
+  @include nav-item($color);
+}
+
+.nav-box-off {
+  $color: hsl(0, 0%, 91%, 70%);
+  @include nav-box($color);
+  @include nav-item($color);
 }
